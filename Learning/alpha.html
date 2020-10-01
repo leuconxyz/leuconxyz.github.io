@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<SCRIPT language=JavaScript>
+
+<!-- http://www.spacegun.co.uk -->
+
+var message = "Function disabled to prevent element inspection, stop stealing code from other people, and go do something by yourself. Have a good day.";
+
+function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+document.onmousedown = rtclickcheck;
+
+</SCRIPT>
+
+<script language="JavaScript">
+
+       window.onload = function () {
+           document.addEventListener("contextmenu", function (e) {
+               e.preventDefault();
+           }, false);
+           document.addEventListener("keydown", function (e) {
+               //document.onkeydown = function(e) {
+               // "I" key
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                   disabledEvent(e);
+               }
+               // "J" key
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                   disabledEvent(e);
+               }
+               // "S" key + macOS
+               if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+               }
+               // "U" key
+               if (e.ctrlKey && e.keyCode == 85) {
+                   disabledEvent(e);
+               }
+               // "F12" key
+               if (event.keyCode == 123) {
+                   disabledEvent(e);
+               }
+           }, false);
+           function disabledEvent(e) {
+               if (e.stopPropagation) {
+                   e.stopPropagation();
+               } else if (window.event) {
+                   window.event.cancelBubble = true;
+               }
+               e.preventDefault();
+               return false;
+           }
+
+       }
+//edit: removed ";" from last "}" because of javascript error
+</script>
+
+<!-- scripts above are taken from the internet, might have been edited-->
+
+<style>
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color: pink; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+</style>
+
+<!-- styles above are self-made and some taken from the internet -->
+
+<html>
+<head>
+	<title>"New Tab"</title>
+</head>
+<body style="background-color: black">
+	<div style="color:white">
+	<h1>Things I've Learned</h1>
+	<img src="https://media.discordapp.net/attachments/410171399408320512/760895047196606515/ileadlogo1.png?width=280&height=280">
+	<p><button style="position: relative; left: 68px; background-color: #33B5FF">
+		<a href="http://ileadtraders.xyz" target="_blank"> Click me to visit iLead</a>
+	</button></p>
+		<p style="color:black">Made by "USERNAME"</p>
+		<h2>Internet Basics</h2>
+			<ol>
+				<li>HTTP Requests </li>
+				<li>IP Address</li>
+				<li>Servers</li>
+			</ol>
+		<h2>HTML</h2>
+			<ul>
+				<li>Stands for <strong>Hyper Text Markup Language</strong></li>
+				<li>Lots of tags</li>
+					<ul>
+						<li>Boilerplate</li>
+							<ol>
+							<li>Doctype</li>
+							<li>HTML</li>
+							<li>Head</li>
+						<ol>
+							<li>Title</li>
+							</ol>
+							<li>Body</li>
+						</ol>	
+					<li>Headings</li>
+					<li>Paragraph</li>
+					<li><em>em</em></li>
+					<li><strong>strong</strong></li>
+				</ul>
+			</ul>
+
+		<ul><li><h1>iLead Staff Table</h1></li></ul>
+
+	<table border="1">
+
+		<tr>
+			<th> Picture </th>
+			<th> Name </th>
+			<th> Role </th>
+			<th> Contact </th>
+		</tr>
+
+		<tr>
+			<td>
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898142650/B9236C558AF08ABA4B97A0B16F72B0BC5589B774/">
+			</td>
+			<td>
+				Leo
+			</td>
+			<td>
+				Founder
+			</td>
+			<td>
+				"USERNAME"#0210
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898141265/830B162ADCE7F4AA3E22E363263927AB3591FC0E/">
+			</td>
+			<td>
+				Ivo
+			</td>
+			<td>
+				Founder
+			</td>
+			<td>
+				"The66man"#2830
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144095/88D3A4086C66785E850FD2013FF34CCD9B390B57/">
+			</td>
+			<td>
+				David
+			</td>
+			<td>
+				Co-Founder
+			</td>
+			<td>
+				Poctlek#0013
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144156/2F0A69D6683481BFCE5BC5DEF49A06B37049246D/">
+			</td>
+			<td>
+				Chico
+			</td>
+			<td>
+				Associated
+			</td>
+			<td>
+				"MrKiko"#8185
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144126/7C0504935A23DF84D217668201EF0E2E0A3CCDD2/">
+			</td>
+			<td>
+				Estevam
+			</td>
+			<td>
+				Associated
+			</td>
+			<td>
+				EST3V4M#2840
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898142545/4136D3C115C42FBD96D1A51D0922A33EABD4FB6D/">
+			</td>
+			<td>
+				Mauro
+			</td>
+			<td>
+				Associated
+			</td>
+			<td>
+				<\invalid characters/>
+			</td>
+		</tr>
+
+			</table>
+		</div>
+	</body>
+</html>
