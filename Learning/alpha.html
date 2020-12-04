@@ -1,234 +1,261 @@
 <!DOCTYPE html>
 
-<SCRIPT language=JavaScript>
+<script language="JavaScript">
+    <!-- http://www.spacegun.co.uk -->var message = "Function disabled to prevent element inspection, stop stealing code from other people, and go do something by yourself. Have a good day.";
 
-<!-- http://www.spacegun.co.uk -->
+    function rtclickcheck(keyp) {
+        if (navigator.appName == "Netscape" && keyp.which == 3) {
+            alert(message);
+            return false;
+        }
 
-var message = "Function disabled to prevent element inspection, stop stealing code from other people, and go do something by yourself. Have a good day.";
+        if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+            alert(message);
+            return false;
+        }
+    }
 
-function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
-
-if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
-
-document.onmousedown = rtclickcheck;
-
-</SCRIPT>
+    document.onmousedown = rtclickcheck;
+</script>
 
 <script language="JavaScript">
-
-       window.onload = function () {
-           document.addEventListener("contextmenu", function (e) {
-               e.preventDefault();
-           }, false);
-           document.addEventListener("keydown", function (e) {
-               //document.onkeydown = function(e) {
-               // "I" key
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-                   disabledEvent(e);
-               }
-               // "J" key
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-                   disabledEvent(e);
-               }
-               // "S" key + macOS
-               if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                   disabledEvent(e);
-               }
-               // "U" key
-               if (e.ctrlKey && e.keyCode == 85) {
-                   disabledEvent(e);
-               }
-               // "F12" key
-               if (event.keyCode == 123) {
-                   disabledEvent(e);
-               }
-           }, false);
-           function disabledEvent(e) {
-               if (e.stopPropagation) {
-                   e.stopPropagation();
-               } else if (window.event) {
-                   window.event.cancelBubble = true;
-               }
-               e.preventDefault();
-               return false;
-           }
-
-       }
-//edit: removed ";" from last "}" because of javascript error
+    window.onload = function () {
+        document.addEventListener(
+            "contextmenu",
+            function (e) {
+                e.preventDefault();
+            },
+            false
+        );
+        document.addEventListener(
+            "keydown",
+            function (e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            },
+            false
+        );
+        function disabledEvent(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation();
+            } else if (window.event) {
+                window.event.cancelBubble = true;
+            }
+            e.preventDefault();
+            return false;
+        }
+    };
+    //edit: removed ";" from last "}" because of javascript error
 </script>
 
 <!-- scripts above are taken from the internet, might have been edited-->
 
 <style>
-a {
-    color: white;
-    text-decoration: none;
-    text-shadow: 1px 1px black;
-}
+    a {
+        color: white;
+        text-decoration: none;
+        text-shadow: 1px 1px black;
+    }
 
-a:hover 
-{
-     color: pink; 
-     text-decoration:none; 
-     cursor:pointer;  
-}
+    a:hover {
+        color: pink;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
 
 <!-- styles above are self-made and some taken from the internet -->
 
 <html>
-<head>
-	<title>"Boss Tab"</title>
-	<link rel="icon" href="donut.png">
-</head>
-<body style="background-color: black">
-	<div style="color:white">
-	<h1>Things I've Learned</h1>
-	<img src="https://media.discordapp.net/attachments/410171399408320512/760895047196606515/ileadlogo1.png?width=280&height=280">
-	<p><button style="position: relative; left: 68px; background-color: #33B5FF">
-		<a href="http://ileadtraders.xyz" target="_blank"> Click me to visit iLead</a>
-	</button></p>
-		<p style="color:black">Made by "USERNAME"</p>
-		<h2>Internet Basics</h2>
-			<ol>
-				<li>HTTP Requests</li>
-				<li>IP Address</li>
-				<li>Servers</li>
-			</ol>
-		<h2>HTML</h2>
-			<ul>
-				<li>Stands for <strong>Hyper Text Markup Language</strong></li>
-				<li>Lots of tags</li>
-					<ul>
-						<li>Boilerplate</li>
-							<ol>
-							<li>Doctype</li>
-							<li>HTML</li>
-							<li>Head</li>
-								<ol>
-									<li>Title</li>
-								</ol>
-							<li>Body</li>
-						</ol>	
-					<li>Headings</li>
-					<li>Paragraph</li>
-					<li><em>em</em></li>
-					<li><strong>strong</strong></li>
-				</ul>
-			</ul>
-		</div>
+    <head>
+        <title>"Boss Tab"</title>
+        <link rel="icon" href="donut.png" />
+    </head>
+    <body style="background-color: black;">
+        <div style="color: white;">
+            <h1>Things I've Learned</h1>
+            <img src="https://media.discordapp.net/attachments/410171399408320512/760895047196606515/ileadlogo1.png?width=280&height=280" />
+            <p>
+                <button style="position: relative; left: 68px; background-color: #33b5ff;">
+                    <a href="http://ileadtraders.xyz" target="_blank"> Click me to visit iLead</a>
+                </button>
+            </p>
+            <p style="color: black;">Made by "USERNAME"</p>
+            <h2>Internet Basics</h2>
+            <ol>
+                <li>HTTP Requests</li>
+                <li>IP Address</li>
+                <li>Servers</li>
+            </ol>
+            <h2>HTML</h2>
+            <ul>
+                <li>Stands for <strong>Hyper Text Markup Language</strong></li>
+                <li>Lots of tags</li>
+                <ul>
+                    <li>Boilerplate</li>
+                    <ol>
+                        <li>Doctype</li>
+                        <li>HTML</li>
+                        <li>Head</li>
+                        <ol>
+                            <li>Title</li>
+                        </ol>
+                        <li>Body</li>
+                    </ol>
+                    <li>Headings</li>
+                    <li>Paragraph</li>
+                    <li><em>em</em></li>
+                    <li><strong>strong</strong></li>
+                </ul>
+            </ul>
+        </div>
 
-		<div style="color:white;">
-			
-			<ul style="background-image: url('https://www.cs.technion.ac.il/~cs234313/projects_sites/W19/14/site/images/background2.jpg'); border-style: outset; border-width: medium; background-repeat: no-repeat; width: 877px; position: relative; top: 10px"><li><h2>iLead Staff Table</h2></li></ul>
+        <div style="color: white;">
+            <ul
+                style="
+                    background-image: url('https://www.cs.technion.ac.il/~cs234313/projects_sites/W19/14/site/images/background2.jpg');
+                    border-style: outset;
+                    border-width: medium;
+                    background-repeat: no-repeat;
+                    width: 877px;
+                    position: relative;
+                    top: 10px;
+                "
+            >
+                <li><h2>iLead Staff Table</h2></li>
+            </ul>
+        </div>
 
-		</div>
+        <div style="color: white;">
+            <table border="1" style="border-style: outset; border-width: medium;">
+                <tr>
+                    <th>Picture</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Contact</th>
+                </tr>
 
-		<div style="color:white;">
+                <tr>
+                    <td>
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898142650/B9236C558AF08ABA4B97A0B16F72B0BC5589B774/" />
+                    </td>
+                    <td>
+                        Leo
+                    </td>
+                    <td>
+                        <center><em>Founder</em></center>
+                    </td>
+                    <td>
+                        <center>"USERNAME"#0210</center>
+                    </td>
+                </tr>
 
-	<table border="1" style="border-style: outset; border-width: medium;">
+                <tr>
+                    <td>
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898141265/830B162ADCE7F4AA3E22E363263927AB3591FC0E/" />
+                    </td>
+                    <td>
+                        Ivo
+                    </td>
+                    <td>
+                        <center><em>Founder</em></center>
+                    </td>
+                    <td>
+                        <center>"The66man"#2830</center>
+                    </td>
+                </tr>
 
-		<tr>
-			<th> Picture </th>
-			<th> Name </th>
-			<th> Role </th>
-			<th> Contact </th>
-		</tr>
+                <tr>
+                    <td>
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144095/88D3A4086C66785E850FD2013FF34CCD9B390B57/" />
+                    </td>
+                    <td>
+                        David
+                    </td>
+                    <td>
+                        <center><em>Co-Founder</em></center>
+                    </td>
+                    <td>
+                        <center>Poctlek#0013</center>
+                    </td>
+                </tr>
 
-		<tr>
-			<td>
-				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898142650/B9236C558AF08ABA4B97A0B16F72B0BC5589B774/">
-			</td>
-			<td>
-				Leo
-			</td>
-			<td>
-				<center><em>Founder</em></center>
-			</td>
-			<td>
-				<center>"USERNAME"#0210</center>
-			</td>
-		</tr>
+                <tr>
+                    <td>
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144156/2F0A69D6683481BFCE5BC5DEF49A06B37049246D/" />
+                    </td>
+                    <td>
+                        Chico
+                    </td>
+                    <td>
+                        <center><em>Associated</em></center>
+                    </td>
+                    <td>
+                        <center>"MrKiko"#8185</center>
+                    </td>
+                </tr>
 
-		<tr>
-			<td>
-				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898141265/830B162ADCE7F4AA3E22E363263927AB3591FC0E/">
-			</td>
-			<td>
-				Ivo
-			</td>
-			<td>
-				<center><em>Founder</em></center>
-			</td>
-			<td>
-				<center>"The66man"#2830</center>
-			</td>
-		</tr>
+                <tr>
+                    <td>
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144126/7C0504935A23DF84D217668201EF0E2E0A3CCDD2/" />
+                    </td>
+                    <td>
+                        Estevam
+                    </td>
+                    <td>
+                        <center><em>Associated</em></center>
+                    </td>
+                    <td>
+                        <center>EST3V4M#2840</center>
+                    </td>
+                </tr>
 
-		<tr>
-			<td>
-				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144095/88D3A4086C66785E850FD2013FF34CCD9B390B57/">
-			</td>
-			<td>
-				David
-			</td>
-			<td>
-				<center><em>Co-Founder</em></center>
-			</td>
-			<td>
-				<center>Poctlek#0013</center>
-			</td>
-		</tr>
+                <tr>
+                    <td>
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898142545/4136D3C115C42FBD96D1A51D0922A33EABD4FB6D/" />
+                    </td>
+                    <td>
+                        Mauro
+                    </td>
+                    <td>
+                        <center><em>Associated</em></center>
+                    </td>
+                    <td>
+                        <center><\invalid characters/></center>
+                        <center><p>Look for Bro0kS</p></center>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-		<tr>
-			<td>
-				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144156/2F0A69D6683481BFCE5BC5DEF49A06B37049246D/">
-			</td>
-			<td>
-				Chico
-			</td>
-			<td>
-				<center><em>Associated</em></center>
-			</td>
-			<td>
-				<center>"MrKiko"#8185</center>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898144126/7C0504935A23DF84D217668201EF0E2E0A3CCDD2/">
-			</td>
-			<td>
-				Estevam
-			</td>
-			<td>
-				<center><em>Associated</em></center>
-			</td>
-			<td>
-				<center>EST3V4M#2840</center>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-			<img src="https://steamuserimages-a.akamaihd.net/ugc/880881366898142545/4136D3C115C42FBD96D1A51D0922A33EABD4FB6D/">
-			</td>
-			<td>
-				Mauro
-			</td>
-			<td>
-				<center><em>Associated</em></center>
-			</td>
-			<td>
-				<center><\invalid characters/></center>
-				<center><p>Look for Bro0kS</p></center>
-			</td>
-		</tr>
-
-			</table>
-		</div>
-
-			<iframe src="https://ptb.discordapp.com/widget?id=410168951285481491&theme=dark" width="540" height="470" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" border="1" style="border-style: outset; border-width: medium; border-color: grey; position: relative; left: 377px; bottom: 476px;"></iframe>
-	</body>
+        <iframe
+            src="https://ptb.discordapp.com/widget?id=410168951285481491&theme=dark"
+            width="540"
+            height="470"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            border="1"
+            style="border-style: outset; border-width: medium; border-color: grey; position: relative; left: 377px; bottom: 476px;"
+        ></iframe>
+    </body>
 </html>
