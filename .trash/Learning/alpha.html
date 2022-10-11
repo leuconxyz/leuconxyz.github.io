@@ -1,73 +1,6 @@
 <!DOCTYPE html>
 
-<script language="JavaScript">
-    <!-- http://www.spacegun.co.uk -->var message = "Function disabled to prevent element inspection, stop stealing code from other people, and go do something by yourself. Have a good day.";
-
-    function rtclickcheck(keyp) {
-        if (navigator.appName == "Netscape" && keyp.which == 3) {
-            alert(message);
-            return false;
-        }
-
-        if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
-            alert(message);
-            return false;
-        }
-    }
-
-    document.onmousedown = rtclickcheck;
-</script>
-
-<script language="JavaScript">
-    window.onload = function () {
-        document.addEventListener(
-            "contextmenu",
-            function (e) {
-                e.preventDefault();
-            },
-            false
-        );
-        document.addEventListener(
-            "keydown",
-            function (e) {
-                //document.onkeydown = function(e) {
-                // "I" key
-                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-                    disabledEvent(e);
-                }
-                // "J" key
-                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-                    disabledEvent(e);
-                }
-                // "S" key + macOS
-                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                    disabledEvent(e);
-                }
-                // "U" key
-                if (e.ctrlKey && e.keyCode == 85) {
-                    disabledEvent(e);
-                }
-                // "F12" key
-                if (event.keyCode == 123) {
-                    disabledEvent(e);
-                }
-            },
-            false
-        );
-        function disabledEvent(e) {
-            if (e.stopPropagation) {
-                e.stopPropagation();
-            } else if (window.event) {
-                window.event.cancelBubble = true;
-            }
-            e.preventDefault();
-            return false;
-        }
-    };
-    //edit: removed ";" from last "}" because of javascript error
-</script>
-
-<!-- scripts above are taken from the internet, might have been edited-->
+<!-- This is old a trash code, I am just removing some stuff from the past -->
 
 <style>
     a {
@@ -88,15 +21,15 @@
 <html>
     <head>
         <title>"Boss Tab"</title>
-        <link rel="icon" href="donut.png" />
+        <link rel="icon" href="../../res/img/donut.png" />
     </head>
     <body style="background-color: black;">
         <div style="color: white;">
             <h1>Things I've Learned</h1>
-            <img src="https://media.discordapp.net/attachments/410171399408320512/760895047196606515/ileadlogo1.png?width=280&height=280" />
+            <img src="https://cdn.discordapp.com/attachments/836708770813575229/854776872705720360/firstlogo.png" />
             <p>
-                <button style="position: relative; left: 68px; background-color: #33b5ff;">
-                    <a href="http://ileadtraders.xyz" target="_blank"> Click me to visit iLead</a>
+                <button style="position: relative; left: 30px; background-color: #741313;">
+                    <a href="https://discord.gg/pRyb6C272H" target="_blank"> Click me to visit The Boring Club</a>
                 </button>
             </p>
             <p style="color: black;">Made by "USERNAME"</p>
