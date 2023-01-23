@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #202025;
+
+    font-family: "Inter", sans-serif;
+}
+
+li, a, button {
+    font-weight: 500;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.navbar-head {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 2%;
+}
+
+.navbar-head-logo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 75px;
+    height: 75px;
+}
+
+.navbar-head-logo-text {
+    font-weight: bold;
+    margin-right: auto;
+    font-size: 26px;
+    transition: all ease 0.3s;
+}
+
+.navbar-head-logo-text:hover {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.navbar-head-links {
+    list-style: none;
+}
+
+.navbar-head-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar-head-links li a {
+    transition: all ease 0.3s;
+}
+
+.navbar-head-links li a:hover {
+    color: #e12531;
+}
+
+button {
+    margin-left: 30px;
+    padding: 9px 25px;
+    background-color: rgb(157, 20, 29, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+button:hover {
+    background-color: rgba(157, 20, 29, 0.7);
+}
+
+@media (max-width: 710px) {
+    .navbar-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        min-width: 350px;
+    }
+
+    .navbar-head-logo-text {
+        margin-right: revert;
+        justify-content: center;
+        letter-spacing: 12px;
+    }
+
+    button {
+        margin-left: revert;
+        width: 300px;
+    }
+
+}
