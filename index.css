@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+/* General code */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #202025;
-
     font-family: "Inter", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    background-color: #202025;
+}
+
+footer {
+    margin-top: auto;
 }
 
 li, a, button {
@@ -15,6 +26,27 @@ li, a, button {
     color: #FFFFFF;
     font-size: 16px;
 }
+
+button {
+    margin-left: 30px;
+    padding: 9px 25px;
+    background-color: rgb(157, 20, 29, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+button:hover {
+    background-color: rgba(157, 20, 29, 0.7);
+}
+
+.padded-p-subtle {
+    padding-top: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Code for the top bar */
 
 .navbar-head {
     display: flex;
@@ -58,19 +90,38 @@ li, a, button {
     color: #e12531;
 }
 
-button {
-    margin-left: 30px;
-    padding: 9px 25px;
-    background-color: rgb(157, 20, 29, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all ease 0.3s;
+/* Code for the landing page */
+
+
+
+/* Code for the page's footer */
+.footer-start {
+    color: #FFFFFF;
+    background-color: #1d1d21;
+    align-items: center;
+
 }
 
-button:hover {
-    background-color: rgba(157, 20, 29, 0.7);
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(25, 25, 28, 0.1);
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
+
+.footer-ending {
+    display: flex;
+    justify-content: center;
+    background-color: #19191c;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+
+}
+
+
+/* Code to be "responsive" */
 
 @media (max-width: 710px) {
     .navbar-head {
@@ -92,4 +143,12 @@ button:hover {
         width: 300px;
     }
 
+    .footer-ending {
+        font-size: 2vw;
+    }
+
+    .footer-content {
+        min-width: 300px;
+        font-size: 2.5vw;
+    }
 }
