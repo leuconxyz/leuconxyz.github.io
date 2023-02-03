@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-/* General code */
+/*
+    General code
+*/
 
 * {
     box-sizing: border-box;
@@ -35,6 +37,7 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all ease 0.3s;
+    min-width: 140px;
 }
 
 button:hover {
@@ -46,13 +49,16 @@ button:hover {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Code for the top bar */
+/*
+    Code for the top bar
+*/
 
 .navbar-head {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 30px 2%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-head-logo {
@@ -75,6 +81,7 @@ button:hover {
 
 .navbar-head-links {
     list-style: none;
+    min-width: 330px;
 }
 
 .navbar-head-links li {
@@ -90,11 +97,73 @@ button:hover {
     color: #e12531;
 }
 
-/* Code for the landing page */
+/*
+    Code for the landing page
+*/
+.landingPage {
+    display: flex;
+}
 
+/* Landing Cards */
+.landing-card {
+    align-self: center;
+    width: 45em;
+    color: #FFFFFF;
+    display: flex;
+    background-color: #19191c;
+    margin: 2em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
 
+.landing-card-text {
+    padding: 1.5em;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
 
-/* Code for the page's footer */
+.landing-card-text small {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.landing-card-text p {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.landing-card-image {
+    width: 50%;
+    height: 17em;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-card-image img {
+    width: 100%;
+}
+
+.landing-card-image::before {
+    content: '';
+    position: absolute;
+    left: -6.1em;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    background-color: #19191c;
+    width: 40%;
+    height: 140%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.landing-card-left .landing-card-image::before {
+    transform: translateY(-50%) rotate(-20deg);
+    left: initial;
+    right: -6.1em;
+}
+
+/*
+    Code for the page's footer
+*/
 .footer-start {
     color: #FFFFFF;
     background-color: #1d1d21;
@@ -121,7 +190,9 @@ button:hover {
 }
 
 
-/* Code to be "responsive" */
+/*
+    Code to be "responsive"
+*/
 
 @media (max-width: 710px) {
     .navbar-head {
@@ -153,8 +224,42 @@ button:hover {
     }
 }
 
+@media (max-width: 780px) {
+    /* For the cards */
+    .landing-card {
+        display: block;
+        width: 20em;
+    }
 
-/* Animations */
+    .landing-card-text {
+        width: 100%;
+    }
+
+    .landing-card-image {
+        width: 100%;
+    }
+
+    .landing-card .landing-card-image::before {
+        width: 160%;
+        height: 40%;
+        top: -6em;
+        left: 5em;
+        transform: translateX(-50%) rotate(5deg);
+    }
+
+    .landing-card-left .landing-card-image::before {
+        transform: translateY(-50%) rotate(-5deg);
+        top: initial;
+        bottom: -9em;
+        left: unset;
+    }
+}
+
+
+
+/*
+    Animations
+*/
 
 /* Snow, for christmas */
 /*.snow {
@@ -183,3 +288,17 @@ button:hover {
     }
 }*/
 
+/*
+    Special Occasions
+ */
+.valentines {
+    padding-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.valentines img {
+    background-color: rgba(255, 255, 255, 0.5);;
+    box-shadow: 0 0 20px rgba(126, 6, 6, 0.7);
+}
